@@ -4495,15 +4495,17 @@ textarea {
   width: 26px;
   height: 26px;
   background: url(../img/user-label-star-empty.svg) no-repeat;
+  background-size: contain;
   cursor: pointer;
 }
 .user-profile__label--star.active {
   background: url(../img/user-label-star.svg) no-repeat;
+  background-size: contain;
 }
 @media screen and (max-width: 1400px) {
-  .user-profile__label > img {
-    width: 20px;
-    height: 20px;
+  .user-profile__label--star {
+    width: 22px;
+    height: 22px;
   }
 }
 @media screen and (max-width: 768px) {
