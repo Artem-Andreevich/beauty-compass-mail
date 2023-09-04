@@ -962,6 +962,16 @@ main
                 width: 100%
                 object-fit: cover
                 cursor: pointer
+    &__text
+        &--preview
+            display: -webkit-box
+            -webkit-line-clamp: 2
+            -webkit-box-orient: vertical
+            text-overflow: ellipsis
+            overflow: hidden
+            &:hover
+                color: #494949
+                opacity: .7
 
     &__image
         width: 100%
