@@ -24,9 +24,19 @@
   }
 }
 .user-profile__label {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 10px;
+}
+.user-profile__label--star {
+  width: 26px;
+  height: 26px;
+  background: url(../img/user-label-star-empty.svg) no-repeat;
+  cursor: pointer;
+}
+.user-profile__label--star.active {
+  background: url(../img/user-label-star.svg) no-repeat;
 }
 @media screen and (max-width: 1400px) {
   .user-profile__label > img {
@@ -40,6 +50,27 @@
     top: 0;
     right: calc(50% - 90px);
   }
+}
+.user-profile__thanks {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  display: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 0px 4px 20px 0 rgba(14, 14, 14, 0.07);
+}
+@media screen and (max-width: 768px) {
+  .user-profile__thanks {
+    left: auto;
+    right: 0;
+  }
+}
+.user-profile__thanks.show {
+  display: block;
 }
 @media screen and (max-width: 768px) {
   .user-profile__stat {

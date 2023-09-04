@@ -132,8 +132,8 @@
                     <div class="user-profile__info d-flex flex-column gap-1">
                         <div class="user-profile__nickname">
                             <span class="title--20-36 lh-125 dark-semi">НикНейм</span>
-                            <div class="user-profile__label user-profile__label--star">
-                                <img src="../img/user-label-star.svg" alt="">
+                            <div class="user-profile__label user-profile__label--star" onclick="userThanks(this)">
+                                <div class="user-profile__thanks fw-600 dark-semi">Вы поблагодарили автора</div>
                             </div>
                             <div class="user-profile__label user-profile__label--ban">
                                 <img src="../img/user-label-ban.svg" alt="">
@@ -147,7 +147,7 @@
                             <span>Рейтинг: 352</span>
                         </div>
                         <div class="user-profile__action d-flex gap-3 mt-3">
-                            <a href="#" class="btn btn--base">Подписаться</a>
+                            <a href="#" class="btn btn--base" onclick="userSubscribe(this, event)">Подписаться</a>
                             <a href="#" class="btn btn--base">Написать</a>
                         </div>
                     </div>   
@@ -160,7 +160,7 @@
                     </div>
                     <div class="user-profile__details">
                         <button class="user-profile__details__btn d-flex align-items-center gap-3 w-100 text--12-18 fw-600" type="button" data-bs-toggle="collapse" data-bs-target="#user-profile__details" aria-expanded="false" aria-controls="user-profile__details">
-                            <span>Информация о читателе</span>
+                            <span>Информация об авторе</span>
                             <svg class="ease3" width="19" height="10" viewBox="0 0 19 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M18.75 0.878653C18.75 1.07766 18.6743 1.27667 18.5121 1.43379L11.4609 8.263C10.3145 9.37327 8.43277 9.37327 7.28641 8.263L0.23522 1.43379C-0.0784066 1.13003 -0.0784066 0.627271 0.23522 0.323518C0.548846 0.0197639 1.06795 0.0197639 1.38158 0.323518L8.43277 7.15273C8.95187 7.65549 9.79542 7.65549 10.3145 7.15273L17.3657 0.323518C17.6793 0.0197639 18.1985 0.0197639 18.5121 0.323518C18.6635 0.480631 18.75 0.679642 18.75 0.878653Z" fill="#210E22"/>
                             </svg>
@@ -247,127 +247,408 @@
                     </div>
                 </div>
 
-                <div class="user-links d-flex flex-wrap gap-3 mt-4">
-                    <a href="#" class="btn btn--base btn--xs-full active">Обзоры автора</a>
-                    <a href="#" class="btn btn--base btn--xs-full">Отзывы на средства</a>
-                    <a href="#" class="btn btn--base btn--xs-full">Темы в беседке</a>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <section class="articles">
+    <section class="user-tabs">
         <div class="container container--bc">
-          <div class="row justify-content-center">
-            <div class="col-10 col-xxl-4 mt-5 mb-3 mb-md-2 mb-xxl-0">
-              <a href="" class="text-center title--h2">Обзоры</a>
-            </div>
-          </div>
-          <div class="row justify-content-center articles__list">
-            <div class="col-12 col-md-6 col-xxl-5 py-1 py-md-3">
-              <a href="" class="shadow articles__item">
-                <div class="row articles__info">
-                  <div class="col-6">
-                    <img src="../img/logo-min.png" alt="" />
-                  </div>
-                  <div class="col-6 text-end articles__date">01.01.2023</div>
-                </div>
-                <img src="../img/image 193.png" class="articles__img" alt="" />
-                <h5 class="articles__title">
-                  Заголовок очень очень очень длинной статьи на пару строк
-                </h5>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea...
-                </p>
-              </a>
-            </div>
-            <div class="col-12 col-md-6 col-xxl-5 py-1 py-md-3">
-                <a href="" class="shadow articles__item">
-                  <div class="row articles__info">
-                    <div class="col-6">
-                      <img src="../img/logo-min.png" alt="" />
-                    </div>
-                    <div class="col-6 text-end articles__date">01.01.2023</div>
-                  </div>
-                  <img src="../img/image 193.png" class="articles__img" alt="" />
-                  <h5 class="articles__title">
-                    Заголовок очень очень очень длинной статьи на пару строк
-                  </h5>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea...
-                  </p>
-                </a>
-            </div>
-            <div class="col-12 col-md-6 col-xxl-5 py-1 py-md-3">
-                <a href="" class="shadow articles__item">
-                  <div class="row articles__info">
-                    <div class="col-6">
-                      <img src="../img/logo-min.png" alt="" />
-                    </div>
-                    <div class="col-6 text-end articles__date">01.01.2023</div>
-                  </div>
-                  <img src="../img/image 193.png" class="articles__img" alt="" />
-                  <h5 class="articles__title">
-                    Заголовок очень очень очень длинной статьи на пару строк
-                  </h5>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea...
-                  </p>
-                </a>
-            </div>
-            <div class="col-12 col-md-6 col-xxl-5 py-1 py-md-3">
-                <a href="" class="shadow articles__item">
-                <div class="row articles__info">
-                    <div class="col-6">
-                    <img src="../img/logo-min.png" alt="" />
-                    </div>
-                    <div class="col-6 text-end articles__date">01.01.2023</div>
-                </div>
-                <img src="../img/image 193.png" class="articles__img" alt="" />
-                <h5 class="articles__title">
-                    Заголовок очень очень очень длинной статьи на пару строк
-                </h5>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea...
-                </p>
-                </a>
-            </div>
-          </div>
-          <div class="d-flex justify-content-center my-4">
-            <ul class="pagination">
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
-                  <span aria-hidden="true">〈</span>
-                </a>
-              </li>
-              <li class="page-item active">
-                <a class="page-link" href="#">1</a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                  <span aria-hidden="true">〉</span>
-                </a>
-              </li>
-            </ul>
-        </div>
-        </div>
-      </section>
+            <div class="col-xxl-10 offset-xxl-1">
 
+
+                <nav>
+                    <div class="nav user-links d-flex flex-wrap gap-3 mt-4" id="user-tab" role="tablist">
+                      <button class="btn btn--base btn--xs-full active" data-bs-toggle="tab" data-bs-target="#user-tab-review" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Обзоры автора</button>
+                      <button class="btn btn--base btn--xs-full" data-bs-toggle="tab" data-bs-target="#user-tab-feed" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Отзывы на средства</button>
+                      <button class="btn btn--base btn--xs-full" data-bs-toggle="tab" data-bs-target="#user-tab-chat" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Темы в беседке</button>
+                    </div>
+                </nav>
+
+                <div class="tab-content" id="nav-tabContent">
+
+                    <div class="tab-pane fade show active" id="user-tab-review" role="tabpanel" aria-labelledby="user-tab-review" tabindex="0">
+                        <div class="articles">
+                            <div class="row justify-content-center">
+                              <div class="col-10 col-xxl-4 mt-5 mb-3 mb-md-2 mb-xxl-0">
+                                  <div class="text-center title--h2">Обзоры</div>
+                              </div>
+                            </div>
+                            <div class="row articles__list">
+                              <div class="col-12 col-md-6 py-1 py-md-3">
+                                <a href="" class="shadow articles__item">
+                                  <div class="row articles__info">
+                                    <div class="col-6">
+                                      <img src="../img/logo-min.png" alt="" />
+                                    </div>
+                                    <div class="col-6 text-end articles__date">01.01.2023</div>
+                                  </div>
+                                  <img src="../img/image 193.png" class="articles__img" alt="" />
+                                  <h5 class="articles__title">
+                                    Заголовок очень очень очень длинной статьи на пару строк
+                                  </h5>
+                                  <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                    laboris nisi ut aliquip ex ea...
+                                  </p>
+                                </a>
+                              </div>
+                              <div class="col-12 col-md-6 py-1 py-md-3">
+                                  <a href="" class="shadow articles__item">
+                                    <div class="row articles__info">
+                                      <div class="col-6">
+                                        <img src="../img/logo-min.png" alt="" />
+                                      </div>
+                                      <div class="col-6 text-end articles__date">01.01.2023</div>
+                                    </div>
+                                    <img src="../img/image 193.png" class="articles__img" alt="" />
+                                    <h5 class="articles__title">
+                                      Заголовок очень очень очень длинной статьи на пару строк
+                                    </h5>
+                                    <p>
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                      do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                      Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                      laboris nisi ut aliquip ex ea...
+                                    </p>
+                                  </a>
+                              </div>
+                              <div class="col-12 col-md-6 py-1 py-md-3">
+                                  <a href="" class="shadow articles__item">
+                                    <div class="row articles__info">
+                                      <div class="col-6">
+                                        <img src="../img/logo-min.png" alt="" />
+                                      </div>
+                                      <div class="col-6 text-end articles__date">01.01.2023</div>
+                                    </div>
+                                    <img src="../img/image 193.png" class="articles__img" alt="" />
+                                    <h5 class="articles__title">
+                                      Заголовок очень очень очень длинной статьи на пару строк
+                                    </h5>
+                                    <p>
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                      do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                      Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                      laboris nisi ut aliquip ex ea...
+                                    </p>
+                                  </a>
+                              </div>
+                              <div class="col-12 col-md-6 py-1 py-md-3">
+                                  <a href="" class="shadow articles__item">
+                                  <div class="row articles__info">
+                                      <div class="col-6">
+                                      <img src="../img/logo-min.png" alt="" />
+                                      </div>
+                                      <div class="col-6 text-end articles__date">01.01.2023</div>
+                                  </div>
+                                  <img src="../img/image 193.png" class="articles__img" alt="" />
+                                  <h5 class="articles__title">
+                                      Заголовок очень очень очень длинной статьи на пару строк
+                                  </h5>
+                                  <p>
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                      do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                      Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                      laboris nisi ut aliquip ex ea...
+                                  </p>
+                                  </a>
+                              </div>
+                            </div>
+                            <div class="d-flex justify-content-center my-4">
+                              <ul class="pagination">
+                                <li class="page-item">
+                                  <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">〈</span>
+                                  </a>
+                                </li>
+                                <li class="page-item active">
+                                  <a class="page-link" href="#">1</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                  <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">〉</span>
+                                  </a>
+                                </li>
+                              </ul>
+                          </div>
+                      </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="user-tab-feed" role="tabpanel" aria-labelledby="user-tab-feed" tabindex="0">
+                        <div class="user-feed">
+
+                            <div class="row justify-content-center">
+                                <div class="col-10 col-xxl-4 mt-5 mb-3 mb-md-2 mb-xxl-0">
+                                    <div class="text-center title--h2">Отзывы</div>
+                                </div>
+                              </div>
+            
+                            <div class="user-feed__item">
+                                <div class="feed d-flex flex-column mb-5">
+            
+                                    <div class="row mb-2 mb-md-3">
+                                        <a href="" class="text--15-36 questions__heading-link--h1-link">
+                                          Icon Skin Stop Acne Сыворотка Multi-Acid Serum
+                                        </a>
+                                        <a href="#" class="text--10-30 questions__heading-link title__under fw-600" >
+                                        Мультикислотная сыворотка от акне
+                                        </a>
+                                    </div>
+                                    <div class="feed__row">
+                                        <div class="feed__user">
+                                          <a href="#" class="feed__avatar">
+                                            <img src="../img/image 221.png" alt="avatar" />
+                                          </a>
+                                          <div class="feed__info">
+                                            <a href="#" class="feed__name">Дарья С.</a>
+                                            <div class="d-flex align-items-center gap-2">
+                                              <div class="rating">
+                                                <div class="rating__body">
+                                                  <div class="rating__active" style="width: 20%"></div>
+                                                </div>
+                                              </div>
+                                              <div class="feed__date">22.08.2022</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <a href="#" class="feed__text feed__text--preview dark-semi mb-3">
+                                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                          do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                          do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                          Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                          laboris nisi ut aliquip ex ea...Lorem ipsum dolor sit amet,
+                                          consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                          ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                          quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                                          ea?
+                                        </a>
+                        
+                                        <section
+                                          id="feed-image-slider"
+                                          class="feed__splide splide"
+                                          aria-label="Feed slides"
+                                        >
+                                          <div class="splide__track">
+                                            <div class="splide__list">
+                                              <div class="splide__slide">
+                                                <img
+                                                  src="../img/image 224.jpg"
+                                                  alt="review-photo"
+                                                  data-modal-image
+                                                />
+                                              </div>
+                                              <div class="splide__slide">
+                                                <img
+                                                  src="../img/image 196.png"
+                                                  alt="review-photo"
+                                                  data-modal-image
+                                                />
+                                              </div>
+                                              <div class="splide__slide">
+                                                <img
+                                                  src="../img/image 192.png"
+                                                  alt="review-photo"
+                                                  data-modal-image
+                                                />
+                                              </div>
+                                              <div class="splide__slide">
+                                                <img
+                                                  src="../img/image 193.png"
+                                                  alt="review-photo"
+                                                  data-modal-image
+                                                />
+                                              </div>
+                                              <div class="splide__slide">
+                                                <img
+                                                  src="../img/image 196.png"
+                                                  alt="review-photo"
+                                                  data-modal-image
+                                                />
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </section>
+                                    </div>
+                
+                                </div>
+            
+                            </div>
+            
+                            <div class="user-feed__item">
+                                <div class="feed d-flex flex-column mb-5">
+            
+                                    <div class="row mb-2 mb-md-3">
+                                        <a href="" class="text--15-36 questions__heading-link--h1-link">
+                                          Icon Skin Stop Acne Сыворотка Multi-Acid Serum
+                                        </a>
+                                        <a href="#" class="text--10-30 questions__heading-link title__under fw-600" >
+                                        Мультикислотная сыворотка от акне
+                                        </a>
+                                    </div>
+                                    <div class="feed__row">
+                                        <div class="feed__user">
+                                          <a href="#" class="feed__avatar">
+                                            <img src="../img/image 221.png" alt="avatar" />
+                                          </a>
+                                          <div class="feed__info">
+                                            <a href="#" class="feed__name">Дарья С.</a>
+                                            <div class="d-flex align-items-center gap-2">
+                                              <div class="rating">
+                                                <div class="rating__body">
+                                                  <div class="rating__active" style="width: 20%"></div>
+                                                </div>
+                                              </div>
+                                              <div class="feed__date">22.08.2022</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <a href="#" class="feed__text feed__text--preview dark-semi mb-3">
+                                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                          do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                          do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                          Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                          laboris nisi ut aliquip ex ea...Lorem ipsum dolor sit amet,
+                                          consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                          ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                          quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                                          ea?
+                                        </a>
+                                    </div>
+                
+                                </div>
+            
+                            </div>
+            
+                            <div class="user-feed__item">
+                                <div class="feed d-flex flex-column mb-5">
+            
+                                    <div class="row mb-2 mb-md-3">
+                                        <a href="" class="text--15-36 questions__heading-link--h1-link">
+                                          Icon Skin Stop Acne Сыворотка Multi-Acid Serum
+                                        </a>
+                                        <a href="#" class="questions__heading-link title__under fw-600" >
+                                        Мультикислотная сыворотка от акне
+                                        </a>
+                                    </div>
+                                    <div class="feed__row">
+                                        <div class="feed__user">
+                                          <a href="#" class="feed__avatar">
+                                            <img src="../img/image 221.png" alt="avatar" />
+                                          </a>
+                                          <div class="feed__info">
+                                            <a href="#" class="feed__name">Дарья С.</a>
+                                            <div class="d-flex align-items-center gap-2">
+                                              <div class="rating">
+                                                <div class="rating__body">
+                                                  <div class="rating__active" style="width: 20%"></div>
+                                                </div>
+                                              </div>
+                                              <div class="feed__date">22.08.2022</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <a href="#" class="feed__text feed__text--preview dark-semi mb-3">
+                                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                          do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                          do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                          Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                          laboris nisi ut aliquip ex ea...Lorem ipsum dolor sit amet,
+                                          consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                          ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                          quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                                          ea?
+                                        </a>
+                        
+                                        <section
+                                          id="feed-image-slider"
+                                          class="feed__splide splide"
+                                          aria-label="Feed slides"
+                                        >
+                                          <div class="splide__track">
+                                            <div class="splide__list">
+                                              <div class="splide__slide">
+                                                <img
+                                                  src="../img/image 224.jpg"
+                                                  alt="review-photo"
+                                                  data-modal-image
+                                                />
+                                              </div>
+                                              <div class="splide__slide">
+                                                <img
+                                                  src="../img/image 196.png"
+                                                  alt="review-photo"
+                                                  data-modal-image
+                                                />
+                                              </div>
+                                              <div class="splide__slide">
+                                                <img
+                                                  src="../img/image 192.png"
+                                                  alt="review-photo"
+                                                  data-modal-image
+                                                />
+                                              </div>
+                                              <div class="splide__slide">
+                                                <img
+                                                  src="../img/image 193.png"
+                                                  alt="review-photo"
+                                                  data-modal-image
+                                                />
+                                              </div>
+                                              <div class="splide__slide">
+                                                <img
+                                                  src="../img/image 196.png"
+                                                  alt="review-photo"
+                                                  data-modal-image
+                                                />
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </section>
+                                    </div>
+                
+                                </div>
+            
+                            </div>
+                            
+                            <div class="d-flex justify-content-center">
+                                <ul class="pagination">
+                                  <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                      <span aria-hidden="true">〈</span>
+                                    </a>
+                                  </li>
+                                  <li class="page-item active">
+                                    <a class="page-link" href="#">1</a>
+                                  </li>
+                                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                  <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                      <span aria-hidden="true">〉</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                            </div>
+                        
+            
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="user-tab-chat" role="tabpanel" aria-labelledby="user-tab-chat" tabindex="0">
+                        333
+                    </div>
+
+                </div>
+
+            </div>
+        </div> 
+    </section>
 
 </main>
 
@@ -758,7 +1039,41 @@
     </div>
 </div>
 
+<script src="../js/splide.min.js"></script>
+<script src="../js/user-subscribe.js"></script>
+<script src="../js/user-thanks.js"></script>
 <script src="../js/bootstrap.bundle.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    Splide.defaults = {
+      perPage: 5,
+      gap: "1.5rem",
+      height: "219px",
+      pagination: false,
+      arrows: false,
+      breakpoints: {
+        1400: {
+          perPage: 4,
+          gap: "1rem",
+          height: "179px",
+          padding: { right: "1.5rem" },
+        },
+        768: {
+          perPage: 3,
+          gap: ".5rem",
+          height: "108px",
+          padding: { right: "1rem" },
+        },
+      },
+    };
+    document.querySelectorAll("#feed-image-slider").forEach(el => {
+        new Splide(el).mount();
+    })
+    // new Splide("#feed-image-slider").mount();
+    // new Splide("#feed-image-slider1").mount();
+  });
+</script>
+
 
 </body>
 </html>
