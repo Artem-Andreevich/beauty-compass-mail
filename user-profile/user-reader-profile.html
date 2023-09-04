@@ -204,19 +204,19 @@
 
     <section class="user-tabs">
         <div class="container container--bc">
-            <div class="col-xxl-10 offset-xxl-1">
+            <div class="col-xxl-10 offset-xxl-1 my-5">
 
 
                 <nav>
                     <div class="nav user-links d-flex flex-wrap gap-3 mt-4" id="user-tab" role="tablist">
-                      <button class="btn btn--base btn--xs-full" data-bs-toggle="tab" data-bs-target="#user-tab-feed" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Отзывы на средства</button>
-                      <button class="btn btn--base btn--xs-full" data-bs-toggle="tab" data-bs-target="#user-tab-chat" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Темы в беседке</button>
+                      <button class="btn btn--base btn--xs-full active" data-bs-toggle="tab" data-bs-target="#user-tab-feed" type="button" role="tab" aria-selected="false">Отзывы на средства</button>
+                      <button class="btn btn--base btn--xs-full" data-bs-toggle="tab" data-bs-target="#user-tab-topic" type="button" role="tab" aria-selected="false">Темы в беседке</button>
                     </div>
                 </nav>
 
                 <div class="tab-content" id="nav-tabContent">
 
-                    <div class="tab-pane fade" id="user-tab-feed" role="tabpanel" aria-labelledby="user-tab-feed" tabindex="0">
+                    <div class="tab-pane fade show active" id="user-tab-feed" role="tabpanel" aria-labelledby="user-tab-feed" tabindex="0">
                         <div class="user-feed">
 
                             <div class="row justify-content-center">
@@ -479,8 +479,40 @@
                         </div>
                     </div>
 
-                    <div class="tab-pane fade" id="user-tab-chat" role="tabpanel" aria-labelledby="user-tab-chat" tabindex="0">
-                        333
+                    <div class="tab-pane fade" id="user-tab-topic" role="tabpanel" aria-labelledby="user-tab-chat" tabindex="0">
+                        <div class="user-topic">
+                            
+                            <div class="row justify-content-center">
+                                <div class="col-10 col-xxl-4 mt-5 mb-3 mb-md-2 mb-xxl-0">
+                                    <div class="text-center title--h2">Темы в беседке</div>
+                                </div>
+                            </div>
+
+                            <div class="user-topic__list d-flex flex-column gap-4">
+
+                                <div class="user-topic__item white-box">
+                                    <div class="feed__date">22.08.2022</div>
+                                    <a href="" class="text--15-36 questions__heading-link--h1-link">
+                                        Какая то тема в беседке
+                                    </a>
+                                </div>
+
+                                <div class="user-topic__item white-box">
+                                    <div class="feed__date">22.08.2022</div>
+                                    <a href="" class="text--15-36 questions__heading-link--h1-link">
+                                        Какая то тема в беседке с длинным названием 
+                                    </a>
+                                </div>
+
+                                <div class="user-topic__item white-box">
+                                    <div class="feed__date">22.08.2022</div>
+                                    <a href="" class="text--15-36 questions__heading-link--h1-link">
+                                        Какая то тема в беседке с очень очень очень длинным названием 
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
 
                 </div>
