@@ -1907,12 +1907,20 @@ main
 .user-rating
     &__filter
         .select--wrapper
-            height: 40px !important
+            height: 42px !important
             @media screen and (max-width: $first-breack-point)
                 height: 26px !important
             @media screen and (max-width: $second-breack-point)
                 width: 100%
-
+        .select--regular
+            min-width: 260px
+            appearance: none
+            background-image: url(../img/dropdown-arr.svg)
+            background-repeat: no-repeat
+            background-position: calc(100% - 15px) center
+            @media screen and (max-width: $first-breack-point)
+                background-size: 12px
+            
 .user-rating-item
     display: grid
     grid-template-columns: 70px 95px 1fr

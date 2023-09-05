@@ -2934,7 +2934,7 @@ textarea {
 }
 
 .user-rating__filter .select--wrapper {
-  height: 40px !important;
+  height: 42px !important;
 }
 @media screen and (max-width: 1400px) {
   .user-rating__filter .select--wrapper {
@@ -2944,6 +2944,20 @@ textarea {
 @media screen and (max-width: 768px) {
   .user-rating__filter .select--wrapper {
     width: 100%;
+  }
+}
+.user-rating__filter .select--regular {
+  min-width: 260px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url(../img/dropdown-arr.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 15px) center;
+}
+@media screen and (max-width: 1400px) {
+  .user-rating__filter .select--regular {
+    background-size: 12px;
   }
 }
 
