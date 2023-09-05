@@ -619,6 +619,18 @@ textarea {
     font-size: 15px;
   }
 }
+.title--20-50, .text--20-50 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+@media screen and (min-width: 1400px) {
+  .title--20-50, .text--20-50 {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}
 .title--20-30, .text--20-30 {
   font-size: 20px;
   font-weight: 700;
@@ -1111,6 +1123,9 @@ textarea {
   background-color: #FFFFFF;
   box-shadow: 0px 4px 20px 0 rgba(14, 14, 14, 0.07);
   border-radius: 15px;
+}
+.white-box--line {
+  border-radius: 0;
 }
 
 .input--regular, .select--regular, .textarea--regular {
@@ -2876,6 +2891,76 @@ textarea {
 .mailing-edit__unsub a:hover {
   opacity: 0.7;
   transition: opacity 0.3s;
+}
+
+.inner-search {
+  position: relative;
+}
+.inner-search button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 100%;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+@media screen and (max-width: 1400px) {
+  .inner-search button {
+    width: 30px;
+  }
+  .inner-search button svg {
+    width: 15px;
+  }
+}
+.inner-search input {
+  padding-left: 50px;
+}
+@media screen and (max-width: 1400px) {
+  .inner-search input {
+    padding-left: 30px;
+  }
+}
+.inner-search input::-ms-input-placeholder {
+  color: #000;
+}
+.inner-search input::placeholder {
+  color: #000;
+}
+
+.user-rating__filter .select--wrapper {
+  height: 40px !important;
+}
+@media screen and (max-width: 1400px) {
+  .user-rating__filter .select--wrapper {
+    height: 26px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .user-rating__filter .select--wrapper {
+    width: 100%;
+  }
+}
+
+.user-rating-item {
+  display: grid;
+  grid-template-columns: 70px 95px 1fr;
+  align-items: center;
+  gap: 30px;
+}
+@media screen and (max-width: 1400px) {
+  .user-rating-item {
+    grid-template-columns: 30px 40px 1fr;
+    gap: 15px;
+  }
+}
+.user-rating-item__avatar img {
+  width: 100%;
 }
 
 .top-bar {
