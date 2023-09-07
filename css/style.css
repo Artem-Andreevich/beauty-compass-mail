@@ -1335,6 +1335,7 @@ textarea {
   color: #c9c9c9;
 }
 .input--gray:focus-visible {
+  border-radius: 15px;
   outline: 2px solid #000000;
 }
 
