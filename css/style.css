@@ -1334,6 +1334,9 @@ textarea {
 .input--gray::placeholder {
   color: #c9c9c9;
 }
+.input--gray:focus-visible {
+  outline: 2px solid #000000;
+}
 
 .label {
   position: absolute;
