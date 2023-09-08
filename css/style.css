@@ -722,6 +722,16 @@ textarea {
     font-size: 24px;
   }
 }
+.title--15-20, .text--15-20 {
+  font-size: 15px;
+  font-style: normal;
+  line-height: normal;
+}
+@media screen and (min-width: 1400px) {
+  .title--15-20, .text--15-20 {
+    font-size: 20px;
+  }
+}
 .title--12-18, .text--12-18 {
   font-size: 12px;
   font-style: normal;
