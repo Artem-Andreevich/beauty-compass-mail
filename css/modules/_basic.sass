@@ -339,6 +339,9 @@ textarea
         color: $main-color
         @media screen and (max-width: $first-breack-point) 
             font-size: 15px
+    &--hover-gray:hover
+        color: $dark-semi-light
+        opacity: .7
 
 
 // === Colors ===
@@ -2039,3 +2042,37 @@ main
                 height: 30px
                 font-size: 15px
                 
+.select
+    &__custom
+        position: relative
+    &__header
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: space-between 
+        cursor: pointer 
+    &__options
+        display: none
+        position: absolute
+        top: 100%
+        left: 0
+        right: 0
+        background: $white-color
+        box-shadow: $box-shadow-regular
+        border-radius: 10px
+        overflow: hidden
+        z-index: 100
+        &.open
+            display: flex
+            flex-direction: column
+        .option
+
+            padding: 12px 20px
+            cursor: pointer
+            transition: 0.3s
+
+            &:hover
+                //color: $main-color
+                background-color: $bg-grey
+            &:active
+                color: $pre-color
