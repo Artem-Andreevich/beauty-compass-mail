@@ -13,10 +13,11 @@
 .articles-preview-item__owner {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 15px;
 }
 .articles-preview-item__owner img {
   max-width: 200px;
+  max-height: 40px;
 }
 @media screen and (max-width: 768px) {
   .articles-preview-item__owner img {
