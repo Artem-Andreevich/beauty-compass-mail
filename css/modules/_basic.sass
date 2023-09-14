@@ -602,6 +602,9 @@ main
     border-radius: $border-radius
     &--line
         border-radius: 0 
+    &--px-10
+        @media screen and (max-width: $second-breack-point)
+            padding: 15px 10px
 
 .input--regular, .select--regular, .textarea--regular
     background: $white-color
