@@ -4257,9 +4257,9 @@ textarea {
   box-sizing: border-box;
 }
 .tags__option {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   padding: 12px 20px;
   cursor: pointer;
   transition: 0.3s;
@@ -4321,7 +4321,6 @@ textarea {
 .products__details .tags__row {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
 }
 @media screen and (min-width: 1400px) {
   .products__details .tags__row {
@@ -4368,9 +4367,7 @@ textarea {
 .products__details .tags__catalog-section_options {
   height: 50vh;
   overflow: auto;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
 }
 
 .select-assignment__options .option {

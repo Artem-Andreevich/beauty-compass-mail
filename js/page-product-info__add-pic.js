@@ -1,24 +1,7 @@
 const bannersContainer = document.querySelector(".banners__row");
 const bannersAddBtn = document.querySelector(".banners__plus");
 
-
-// const bannerOrder = document.createElement("div");
-// bannerOrder.classList.add(
-//   "input", "mt-4", "js-order-wrap"
-// );
-
-// bannerOrder.innerHTML = `
-//   <label class="label--light label--general">Порядковый номер</label>
-//   <select class="input--arrow js-banners-order" aria-label="Default select example">
-//     <option value="1" selected>1</option>
-//   </select>
-// `;
-
-
-const bannerOrder = document.querySelector('.js-banners-order')
 let countOrder = 2
-
-
 
 const addBannersItem = () => {
   const newBannersItem = document.createElement("div");
@@ -41,17 +24,10 @@ const addBannersItem = () => {
   </div>
   <div class="input mt-4">
     <label class="label--light label--general">Порядковый номер</label>
-      <select class="input--arrow js-banners-order" aria-label="Default select example">
-      <option value="${countOrder}" selected>${countOrder}</option>
-    </select>
+    <input type="number" class="js-banners-order" value="${countOrder}" min="1">
   </div>
   `;
 
-  
-  let order = document.createElement("option")
-  order.setAttribute("value", countOrder)
-  order.innerText = countOrder
-  bannerOrder.add(order)
   countOrder++
 
   bannersContainer.insertBefore(newBannersItem, bannersAddBtn);
@@ -63,21 +39,33 @@ const addBannersItem = () => {
 };
 
 
-// const addBannersOrder = () => {
-//     bannersContainer.querySelectorAll('.banners__pic').forEach( el => {
-//       if (el.querySelector('.js-order-wrap')) {
-//           el.querySelector('.js-order-wrap').remove()
-//       }
-//       el.insertAdjacentElement("beforeend", bannerOrder)
-//     })
-// }
-
-bannersAddBtn.addEventListener("click", addBannersItem );
+bannersAddBtn.addEventListener("click", () => {
+  addBannersItem()
+  handleOrderPic()
+});
 
 // remove banner
 const removeBannersItem = (item) => {
   item.remove();
+  handleOrderPic()
+  countOrder--
 };
 
 
+// handleOrderPic
+function handleOrderPic() {
+  
+  const order = document.querySelectorAll('.js-banners-order')
+
+  order.forEach( el => { 
+    el.setAttribute("max", order.length) 
+    el.addEventListener("change", (e) => { 
+      
+      +e.target.value > +el.getAttribute('max') ?
+        e.target.value = el.getAttribute('value') :
+        el.setAttribute("value", e.target.value) 
+  
+    })
+  })
+}
 
